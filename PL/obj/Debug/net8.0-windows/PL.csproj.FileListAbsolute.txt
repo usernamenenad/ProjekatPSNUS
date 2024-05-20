@@ -48,3 +48,4 @@ C:\Users\radovic\Desktop\Files\Projects\ProjekadPSNUS\PL\bin\Debug\net8.0-window
 C:\Users\radovic\Desktop\Files\Projects\ProjekadPSNUS\PL\bin\Debug\net8.0-windows\runtimes\win-x86\native\sni.dll
 C:\Users\radovic\Desktop\Files\Projects\ProjekadPSNUS\PL\bin\Debug\net8.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\radovic\Desktop\Files\Projects\ProjekadPSNUS\PL\bin\Debug\net8.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\radovic\Desktop\Files\Projects\ProjekadPSNUS\PL\obj\Debug\net8.0-windows\PL.sourcelink.json

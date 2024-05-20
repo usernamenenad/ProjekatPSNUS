@@ -12,6 +12,7 @@ namespace PL.src
         [Key]
         public int Id { get; set; }
         public string? Name { get; set; }
+        public string? Location { get; set; }
         public string? StadiumName { get; set; }
         public int StadiumCapacity { get; set; }
     }

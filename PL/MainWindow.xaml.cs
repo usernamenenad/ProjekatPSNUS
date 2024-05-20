@@ -20,17 +20,24 @@ namespace PL
         public MainWindow()
         {
             InitializeComponent();
-            using var context = new MyDbContext();
-            Team brighton = new()
+            List<Team> teams = new();
+            teams.Add(new Team()
             {
                 Id = 1,
                 Name = "Brighton",
-                StadiumName = "Brighton Stadium",
-                StadiumCapacity = 69420
-            };
-            context.Teams.Add(brighton);
-
-            context.SaveChanges();
+                Location = "Brighton",
+                StadiumName = "Lokl",
+                StadiumCapacity = 0,
+            });
+            teams.Add(new Team()
+            {
+                Id = 1,
+                Name = "Neso",
+                Location = "Trnova",
+                StadiumName = "Lokl",
+                StadiumCapacity = 0,
+            });
+            TeamsDataGrid.ItemsSource = teams;
         }
     }
 }
