@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using System.Data;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -20,24 +21,27 @@ namespace PL
         public MainWindow()
         {
             InitializeComponent();
-            List<Team> teams = new();
-            teams.Add(new Team()
-            {
-                Id = 1,
-                Name = "Brighton",
-                Location = "Brighton",
-                StadiumName = "Lokl",
-                StadiumCapacity = 0,
-            });
-            teams.Add(new Team()
-            {
-                Id = 1,
-                Name = "Neso",
-                Location = "Trnova",
-                StadiumName = "Lokl",
-                StadiumCapacity = 0,
-            });
-            TeamsDataGrid.ItemsSource = teams;
+            PLDBContext context = PLDBContext.Instance;
+            TeamsDataGrid.ItemsSource = context.Teams.ToList();
+            PlayersDataGrid.ItemsSource = context.Players.ToList();
+        }
+
+        private void TeamsDataGridRow_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            Team? team = (sender as DataGridRow)?.DataContext as Team;
+
+            var editTeams = new EditTeam();
+            editTeams.Owner = this;
+            editTeams.ShowTeam(team);
+        }
+
+        private void PlayersDataGridRow_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            Player? player= (sender as DataGridRow)?.DataContext as Player;
+
+            var editPlayers = new EditPlayer();
+            editPlayers.Owner = this;
+            editPlayers.ShowPlayer(player);
         }
     }
 }

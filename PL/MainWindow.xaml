@@ -11,7 +11,8 @@
         TextElement.FontWeight="Regular"
         TextElement.FontSize="13"
         TextOptions.TextFormattingMode="Ideal"
-        TextOptions.TextRenderingMode="Auto">
+        TextOptions.TextRenderingMode="Auto"
+        SnapsToDevicePixels="True">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="3*"/>
@@ -52,19 +53,33 @@
                                   GridLinesVisibility="Horizontal"
                                   HorizontalGridLinesBrush="{DynamicResource DataGrid.Grid.HorizontalLineBrush}"
                                   HeadersVisibility="Column">
+                            <DataGrid.Resources>
+                                <Style TargetType="DataGridRow">
+                                    <EventSetter Event="MouseDoubleClick" Handler="TeamsDataGridRow_MouseDoubleClick"/>
+                                </Style>
+                            </DataGrid.Resources>
                             <DataGrid.Columns>
-                                <DataGridTextColumn Header="Ime tima" Binding="{Binding Name}" Width="*"/>
+                                <DataGridTextColumn Header="Ime tima" Binding="{Binding Name}" Width="3*"/>
                                 <DataGridTextColumn Header="Lokacija" Binding="{Binding Location}" Width="*"/>
-                                <DataGridTextColumn Header="Ime stadiona" Binding="{Binding StadiumName}" Width="*"/>
+                                <DataGridTextColumn Header="Ime stadiona" Binding="{Binding StadiumName}" Width="3*"/>
                                 <DataGridTextColumn Header="Kapacitet stadiona" Binding="{Binding StadiumCapacity}" Width="*"/>
                             </DataGrid.Columns>
                         </DataGrid>
                     </Grid>
                     <Grid Grid.Column="1" Margin="10">
-                        <DataGrid x:Name="PlayersDataGrid" IsReadOnly="True">
+                        <DataGrid x:Name="PlayersDataGrid" IsReadOnly="True"
+                                  AutoGenerateColumns="False"
+                                  ItemsSource="{Binding Players, UpdateSourceTrigger=PropertyChanged}">
+                            <DataGrid.Resources>
+                                <Style TargetType="DataGridRow">
+                                    <EventSetter Event="MouseDoubleClick" Handler="PlayersDataGridRow_MouseDoubleClick"/>
+                                </Style>
+                            </DataGrid.Resources>
                             <DataGrid.Columns>
-                                <DataGridTextColumn Header="Ime igrača" Binding="{Binding PlayerName}" Width="*"/>
-                                <DataGridTextColumn Header="Tim" Binding="{Binding PlayerTeam}" Width="*"/>
+                                <DataGridTextColumn Header="Ime i prezime igrača" Binding="{Binding FirstName}" Width="3*"/>
+                                <DataGridTextColumn Header="Datum rođenja" Binding="{Binding BirthDate}" Width="2*"/>
+                                <DataGridTextColumn Header="Starost" Binding="{Binding Age}" Width="1*"/>
+                                <DataGridTextColumn Header="Tim" Binding="{Binding TeamId}" Width="2*"/>
                             </DataGrid.Columns>
                         </DataGrid>
                     </Grid>
