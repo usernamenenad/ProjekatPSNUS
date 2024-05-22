@@ -29,7 +29,9 @@ namespace PL
         public void ShowTeam(Team? t)
         {
             Team = t;
-            TeamImage.Source = new BitmapImage(new Uri($"./Pictures/teams/{Team?.Name?.Replace(" ", "_").ToLower()}.png", UriKind.RelativeOrAbsolute));
+            string location = $"./Pictures/teams/{Team?.Name?.Replace(" ", "_").ToLower()}.png";
+            Uri uri = new(location, UriKind.RelativeOrAbsolute);
+            TeamImage.Source = new BitmapImage(uri);
             Show();
         }
     }

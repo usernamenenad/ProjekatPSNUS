@@ -3,20 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\radovic\\Desktop\\Files\\Projects\\ProjekadPSNUS\\PL\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{40E36547-C7B8-41BB-A4F7-5F684C9F7D9D}|PL.csproj|c:\\users\\radovic\\desktop\\files\\projects\\projekadpsnus\\pl\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{40E36547-C7B8-41BB-A4F7-5F684C9F7D9D}|PL.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{40E36547-C7B8-41BB-A4F7-5F684C9F7D9D}|PL.csproj|c:\\users\\radovic\\desktop\\files\\projects\\projekadpsnus\\pl\\editplayer.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{40E36547-C7B8-41BB-A4F7-5F684C9F7D9D}|PL.csproj|solutionrelative:editplayer.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{40E36547-C7B8-41BB-A4F7-5F684C9F7D9D}|PL.csproj|c:\\users\\radovic\\desktop\\files\\projects\\projekadpsnus\\pl\\editteam.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{40E36547-C7B8-41BB-A4F7-5F684C9F7D9D}|PL.csproj|solutionrelative:editteam.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{40E36547-C7B8-41BB-A4F7-5F684C9F7D9D}|PL.csproj|c:\\users\\radovic\\desktop\\files\\projects\\projekadpsnus\\pl\\editteam.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{40E36547-C7B8-41BB-A4F7-5F684C9F7D9D}|PL.csproj|solutionrelative:editteam.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{40E36547-C7B8-41BB-A4F7-5F684C9F7D9D}|PL.csproj|c:\\users\\radovic\\desktop\\files\\projects\\projekadpsnus\\pl\\editplayer.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -30,79 +18,35 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            }
-          ]
-        },
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
-          "Children": [
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\radovic\\Desktop\\Files\\Projects\\ProjekadPSNUS\\PL\\MainWindow.xaml.cs",
-              "RelativeDocumentMoniker": "MainWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\radovic\\Desktop\\Files\\Projects\\ProjekadPSNUS\\PL\\MainWindow.xaml.cs",
-              "RelativeToolTip": "MainWindow.xaml.cs",
-              "ViewState": "AQIAABwAAAAAAAAAAAAkwCwAAAAJAAAA",
+              "Title": "EditPlayer.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\radovic\\Desktop\\Files\\Projects\\ProjekadPSNUS\\PL\\EditPlayer.xaml.cs",
+              "RelativeDocumentMoniker": "EditPlayer.xaml.cs",
+              "ToolTip": "C:\\Users\\radovic\\Desktop\\Files\\Projects\\ProjekadPSNUS\\PL\\EditPlayer.xaml.cs",
+              "RelativeToolTip": "EditPlayer.xaml.cs",
+              "ViewState": "AQIAACQAAAAAAAAAAAAQwDYAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-21T17:32:22.448Z",
+              "WhenOpened": "2024-05-22T15:10:51.69Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "EditPlayer.xaml",
               "DocumentMoniker": "C:\\Users\\radovic\\Desktop\\Files\\Projects\\ProjekadPSNUS\\PL\\EditPlayer.xaml",
               "RelativeDocumentMoniker": "EditPlayer.xaml",
               "ToolTip": "C:\\Users\\radovic\\Desktop\\Files\\Projects\\ProjekadPSNUS\\PL\\EditPlayer.xaml",
               "RelativeToolTip": "EditPlayer.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-05-21T17:32:00.705Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "EditTeam.xaml",
-              "DocumentMoniker": "C:\\Users\\radovic\\Desktop\\Files\\Projects\\ProjekadPSNUS\\PL\\EditTeam.xaml",
-              "RelativeDocumentMoniker": "EditTeam.xaml",
-              "ToolTip": "C:\\Users\\radovic\\Desktop\\Files\\Projects\\ProjekadPSNUS\\PL\\EditTeam.xaml",
-              "RelativeToolTip": "EditTeam.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-05-21T17:31:45.145Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "EditTeam.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\radovic\\Desktop\\Files\\Projects\\ProjekadPSNUS\\PL\\EditTeam.xaml.cs",
-              "RelativeDocumentMoniker": "EditTeam.xaml.cs",
-              "ToolTip": "C:\\Users\\radovic\\Desktop\\Files\\Projects\\ProjekadPSNUS\\PL\\EditTeam.xaml.cs",
-              "RelativeToolTip": "EditTeam.xaml.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-21T17:30:40.014Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "EditPlayer.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\radovic\\Desktop\\Files\\Projects\\ProjekadPSNUS\\PL\\EditPlayer.xaml.cs",
-              "RelativeDocumentMoniker": "EditPlayer.xaml.cs",
-              "ToolTip": "C:\\Users\\radovic\\Desktop\\Files\\Projects\\ProjekadPSNUS\\PL\\EditPlayer.xaml.cs",
-              "RelativeToolTip": "EditPlayer.xaml.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAABYAAAAbAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-21T17:19:00.53Z",
+              "WhenOpened": "2024-05-22T14:55:55.607Z",
               "EditorCaption": ""
             }
           ]

@@ -29,9 +29,45 @@ namespace PL
         public void ShowPlayer(Player? p)
         {
             Player = p;
-            var uri = new Uri($"./Pictures/players/{Player?.FirstName?.ToLower()}_{Player?.LastName?.ToLower()}.png", UriKind.RelativeOrAbsolute);
+            string location = $"./Pictures/players/{Player?.FirstName?.ToLower()}_{Player?.LastName?.ToLower()}.png";
+            Uri uri = new(location, UriKind.RelativeOrAbsolute);
             PlayerImage.Source = new BitmapImage(uri);
+            PlayerLastName.Text = Player?.LastName;
+            PlayerFirstName.Text = Player?.FirstName;
+            PlayerDateOfBirth.Text = Player?.DateOfBirth.ToShortDateString();
+            PlayerAge.Text = Player?.Age.ToString();
+            PlayerNationality.Text = Player?.Nationality;
+            PlayerTeam.Text = Player?.Team;
+            PlayerApperiances.Text = Player?.Apperiances.ToString();
+            PlayerGoals.Text = Player?.Goals.ToString();
+            PlayerAssists.Text = Player?.Assists.ToString();
+            PlayerJerseyNumber.Text = Player?.JerseyNumber.ToString();
             Show();
+        }
+
+        private void EditPlayerSaveChanges(object sender, RoutedEventArgs e)
+        {
+            if(ValidateInputs(out string errorMessage))
+            {
+                MessageBox.Show(errorMessage, "Error");
+            }
+        }
+
+        private bool ValidateInputs(out string errorMessage)
+        {
+            bool isError = false;
+            errorMessage = "";
+
+            foreach(StackPanel panel in Properties.Children.OfType<StackPanel>())
+            {
+                if (panel.Children.OfType<TextBox>().Any(tbox => string.IsNullOrEmpty(tbox.Text)))
+                {
+                    isError = true;
+                    errorMessage = "No field should be empty!";
+                    break;
+                }
+            }
+            return isError;
         }
     }
 

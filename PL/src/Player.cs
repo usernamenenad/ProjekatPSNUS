@@ -14,14 +14,13 @@ namespace PL.src
         public int Id { get; set; }
         public string? FirstName { get; set; }
         public string? LastName { get; set; }
-        public DateOnly BirthDate { get; set; }
+        public DateOnly DateOfBirth { get; set; }
         public int Age { get; set; }
         public string? Nationality { get; set; }
+        public string? Team { get; set; }
         public int Apperiances { get; set; }
         public int Goals { get; set; }
         public int Assists { get; set; }
         public int JerseyNumber { get; set; }
-        [ForeignKey("Team")]
-        public int TeamId { get; set; } 
     }
 }

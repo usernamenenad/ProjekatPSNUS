@@ -18,30 +18,42 @@ namespace PL
     /// </summary>
     public partial class MainWindow : Window
     {
+        private readonly PLDBContext context;
         public MainWindow()
         {
             InitializeComponent();
-            PLDBContext context = PLDBContext.Instance;
+            context = PLDBContext.Instance;
             TeamsDataGrid.ItemsSource = context.Teams.ToList();
-            PlayersDataGrid.ItemsSource = context.Players.ToList();
         }
 
         private void TeamsDataGridRow_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
             Team? team = (sender as DataGridRow)?.DataContext as Team;
 
-            var editTeams = new EditTeam();
-            editTeams.Owner = this;
-            editTeams.ShowTeam(team);
+            EditTeam editTeam = new()
+            {
+                Owner = this
+            };
+            editTeam.ShowTeam(team);
         }
 
         private void PlayersDataGridRow_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
             Player? player= (sender as DataGridRow)?.DataContext as Player;
 
-            var editPlayers = new EditPlayer();
-            editPlayers.Owner = this;
-            editPlayers.ShowPlayer(player);
+            EditPlayer editPlayer = new()
+            {
+                Owner = this
+            };
+            editPlayer.ShowPlayer(player);
+        }
+
+        private void TeamsRowSelected(object sender, RoutedEventArgs e)
+        {
+            Team? team = (sender as DataGridRow)?.DataContext as Team;
+            var teamname = team.Name;
+            var teamPlayers = context.Players.Where(p => p.Team == team.Name).ToList();
+            PlayersDataGrid.ItemsSource = teamPlayers;
         }
     }
 }

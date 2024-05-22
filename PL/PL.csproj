@@ -9,6 +9,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Pictures\players\bukayo_saka.png" />
+    <None Remove="Pictures\players\cole_palmer.png" />
+    <None Remove="Pictures\players\erling_haaland.png" />
+    <None Remove="Pictures\players\james_milner.png" />
+    <None Remove="Pictures\players\kyle_walker.png" />
+    <None Remove="Pictures\players\rasmus_hojlund.png" />
     <None Remove="Pictures\players\ross_barkley.png" />
     <None Remove="Pictures\pllogo.png" />
     <None Remove="Pictures\teams\arsenal.png" />
@@ -49,6 +55,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Pictures\players\bukayo_saka.png" />
+    <Resource Include="Pictures\players\cole_palmer.png" />
+    <Resource Include="Pictures\players\erling_haaland.png" />
+    <Resource Include="Pictures\players\james_milner.png" />
+    <Resource Include="Pictures\players\kyle_walker.png" />
+    <Resource Include="Pictures\players\rasmus_hojlund.png" />
     <Resource Include="Pictures\players\ross_barkley.png" />
     <Resource Include="Pictures\pllogo.png" />
     <Resource Include="Pictures\teams\arsenal.png" />
