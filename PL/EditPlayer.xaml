@@ -22,11 +22,11 @@
                     <UniformGrid x:Name="Properties" Columns="1">
                         <StackPanel>
                             <TextBlock Margin="2" FontSize="15">Ime</TextBlock>
-                            <TextBox x:Name="PlayerFirstName" Margin="2" PreviewTextInput="TextualInputValidation"/>
+                            <TextBox x:Name="PlayerFirstName" Margin="2" PreviewTextInput="TextualInputValidation" MaxLength="50"/>
                         </StackPanel>
                         <StackPanel>
                             <TextBlock Margin="2" FontSize="15">Prezime</TextBlock>
-                            <TextBox x:Name="PlayerLastName" Margin="2" PreviewTextInput="TextualInputValidation"/>
+                            <TextBox x:Name="PlayerLastName" Margin="2" PreviewTextInput="TextualInputValidation" MaxLength="50"/>
                         </StackPanel>
                         <StackPanel>
                             <TextBlock Margin="2" FontSize="15">Datum rođenja</TextBlock>
@@ -38,11 +38,11 @@
                         </StackPanel>
                         <StackPanel>
                             <TextBlock Margin="2" FontSize="15">Nacionalnost</TextBlock>
-                            <TextBox x:Name="PlayerNationality" Margin="2" PreviewTextInput="TextualInputValidation"/>
+                            <TextBox x:Name="PlayerNationality" Margin="2" PreviewTextInput="TextualInputValidation" MaxLength="50"/>
                         </StackPanel>
                         <StackPanel>
                             <TextBlock Margin="2" FontSize="15">Tim</TextBlock>
-                            <TextBox x:Name="PlayerTeam" Margin="2"/>
+                            <TextBox x:Name="PlayerTeam" Margin="2" MaxLength="50"/>
                         </StackPanel>
                         <StackPanel>
                             <TextBlock Margin="2" FontSize="15">Broj nastupa</TextBlock>

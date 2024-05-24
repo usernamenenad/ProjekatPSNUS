@@ -30,7 +30,7 @@
                         </StackPanel>
                         <StackPanel>
                             <TextBlock Margin="2" FontSize="15">Ime stadiona</TextBlock>
-                            <TextBox x:Name="TeamStadiumName" Margin="2"/>
+                            <TextBox x:Name="TeamStadiumName" Margin="2" MaxLength="50"/>
                         </StackPanel>
                         <StackPanel>
                             <TextBlock Margin="2" FontSize="15">Broj mjesta</TextBlock>
