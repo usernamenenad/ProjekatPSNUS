@@ -9,23 +9,68 @@
         Title="Edit Player" 
         Height="600" 
         Width="760"
-        ResizeMode="NoResize">
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen">
     <Grid>
         <materialDesign:Card Margin="5">
             <Grid>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="4*"/>
                     <ColumnDefinition Width="5*"/>
+                    <ColumnDefinition Width="2*"/>
                 </Grid.ColumnDefinitions>
-                <Grid Grid.Column="0">
+                <Grid Grid.Column="0" Margin="0 0 20 0">
+                    <UniformGrid x:Name="Properties" Columns="1">
+                        <StackPanel>
+                            <TextBlock Margin="2" FontSize="15">Ime</TextBlock>
+                            <TextBox x:Name="PlayerFirstName" Margin="2" PreviewTextInput="TextualInputValidation"/>
+                        </StackPanel>
+                        <StackPanel>
+                            <TextBlock Margin="2" FontSize="15">Prezime</TextBlock>
+                            <TextBox x:Name="PlayerLastName" Margin="2" PreviewTextInput="TextualInputValidation"/>
+                        </StackPanel>
+                        <StackPanel>
+                            <TextBlock Margin="2" FontSize="15">Datum rođenja</TextBlock>
+                            <DatePicker x:Name="PlayerDateOfBirth" Margin="2" Text=""/>
+                        </StackPanel>
+                        <StackPanel>
+                            <TextBlock Margin="2" FontSize="15">Godine</TextBlock>
+                            <TextBox x:Name="PlayerAge" Margin="2" PreviewTextInput="NumericalInputValidation"/>
+                        </StackPanel>
+                        <StackPanel>
+                            <TextBlock Margin="2" FontSize="15">Nacionalnost</TextBlock>
+                            <TextBox x:Name="PlayerNationality" Margin="2" PreviewTextInput="TextualInputValidation"/>
+                        </StackPanel>
+                        <StackPanel>
+                            <TextBlock Margin="2" FontSize="15">Tim</TextBlock>
+                            <TextBox x:Name="PlayerTeam" Margin="2"/>
+                        </StackPanel>
+                        <StackPanel>
+                            <TextBlock Margin="2" FontSize="15">Broj nastupa</TextBlock>
+                            <TextBox x:Name="PlayerApperiances" Margin="2" PreviewTextInput="NumericalInputValidation"/>
+                        </StackPanel>
+                        <StackPanel>
+                            <TextBlock Margin="2" FontSize="15">Broj golova</TextBlock>
+                            <TextBox x:Name="PlayerGoals" Margin="2" PreviewTextInput="NumericalInputValidation"/>
+                        </StackPanel>
+                        <StackPanel>
+                            <TextBlock Margin="2" FontSize="15">Broj asistencija</TextBlock>
+                            <TextBox x:Name="PlayerAssists" Margin="2" PreviewTextInput="NumericalInputValidation"/>
+                        </StackPanel>
+                        <StackPanel>
+                            <TextBlock Margin="2" FontSize="15">Broj dresa</TextBlock>
+                            <TextBox x:Name="PlayerJerseyNumber" Margin="2" PreviewTextInput="NumericalInputValidation"/>
+                        </StackPanel>
+                    </UniformGrid>
+                </Grid>
+                <Grid Grid.Column="1">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="2*"/>
                         <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
                     <Grid Grid.Row="0">
-                        <Image x:Name="PlayerImage"
-                               Height="250"
-                               Width="250"/>
+                        <Image Source="/Pictures/pllogo.png"
+                               Width="150"
+                               Height="150"/>
                     </Grid>
                     <Grid Grid.Row="1">
                         <Grid.Resources>
@@ -34,54 +79,15 @@
                                 <Setter Property="Foreground" Value="#3d195b"/>
                             </Style>
                         </Grid.Resources>
-                        <Button Width="140" 
-                                Height="40"
-                                Style="{StaticResource button2}" Click="EditPlayerSaveChanges">Sačuvaj izmjene</Button>
+                        <UniformGrid Columns="1">
+                            <Button Width="140" 
+        Height="40"
+        Style="{StaticResource button2}" Click="EditPlayerSaveChanges">Sačuvaj izmjene</Button>
+                            <Button Width="140" 
+        Height="40"
+        Style="{StaticResource button2}" Click="RemovePlayer">Ukloni igrača</Button>
+                        </UniformGrid>
                     </Grid>
-                </Grid>
-                <Grid Grid.Column="1" Margin="0 0 20 0">
-                    <UniformGrid x:Name="Properties" Columns="1">
-                        <StackPanel>
-                            <TextBlock Margin="2" FontSize="15">Ime</TextBlock>
-                            <TextBox x:Name="PlayerFirstName" Margin="2"></TextBox>
-                        </StackPanel>
-                        <StackPanel>
-                            <TextBlock Margin="2" FontSize="15">Prezime</TextBlock>
-                            <TextBox x:Name="PlayerLastName" Margin="2"></TextBox>
-                        </StackPanel>
-                        <StackPanel>
-                            <TextBlock Margin="2" FontSize="15">Datum rođenja</TextBlock>
-                            <TextBox x:Name="PlayerDateOfBirth" Margin="2"></TextBox>
-                        </StackPanel>
-                        <StackPanel>
-                            <TextBlock Margin="2" FontSize="15">Godine</TextBlock>
-                            <TextBox x:Name="PlayerAge" Margin="2"></TextBox>
-                        </StackPanel>
-                        <StackPanel>
-                            <TextBlock Margin="2" FontSize="15">Nacionalnost</TextBlock>
-                            <TextBox x:Name="PlayerNationality" Margin="2"></TextBox>
-                        </StackPanel>
-                        <StackPanel>
-                            <TextBlock Margin="2" FontSize="15">Tim</TextBlock>
-                            <TextBox x:Name="PlayerTeam" Margin="2"></TextBox>
-                        </StackPanel>
-                        <StackPanel>
-                            <TextBlock Margin="2" FontSize="15">Broj nastupa</TextBlock>
-                            <TextBox x:Name="PlayerApperiances" Margin="2"></TextBox>
-                        </StackPanel>
-                        <StackPanel>
-                            <TextBlock Margin="2" FontSize="15">Broj golova</TextBlock>
-                            <TextBox x:Name="PlayerGoals" Margin="2"></TextBox>
-                        </StackPanel>
-                        <StackPanel>
-                            <TextBlock Margin="2" FontSize="15">Broj asistencija</TextBlock>
-                            <TextBox x:Name="PlayerAssists" Margin="2"></TextBox>
-                        </StackPanel>
-                        <StackPanel>
-                            <TextBlock Margin="2" FontSize="15">Broj dresa</TextBlock>
-                            <TextBox x:Name="PlayerJerseyNumber" Margin="2"></TextBox>
-                        </StackPanel>
-                    </UniformGrid>
                 </Grid>
             </Grid>
         </materialDesign:Card>

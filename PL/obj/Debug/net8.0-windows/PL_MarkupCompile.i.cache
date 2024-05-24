@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\radovic\Desktop\Files\Projects\ProjekadPSNUS\PL\obj\Debug\net8.0-windows\
+C:\Users\radovic\Desktop\Files\Projects\ProjekatPSNUS\PL\obj\Debug\net8.0-windows\
 PL
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
-C:\Users\radovic\Desktop\Files\Projects\ProjekadPSNUS\PL\App.xaml
-3-405379959
+C:\Users\radovic\Desktop\Files\Projects\ProjekatPSNUS\PL\App.xaml
+5-895563960
 
-11-748345439
-224181466555
-EditPlayer.xaml;EditTeam.xaml;MainWindow.xaml;
+13-1634164124
+222949180289
+AddPlayer.xaml;AddTeam.xaml;EditPlayer.xaml;EditTeam.xaml;MainWindow.xaml;
 
-False
+True
 

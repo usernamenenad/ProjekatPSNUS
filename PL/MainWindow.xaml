@@ -28,12 +28,8 @@
                         </Style>
                     </UniformGrid.Resources>
                     <Image Source="/Pictures/pllogo.png" HorizontalAlignment="Center" Width="190"/>
-                    <Button Style="{StaticResource button1}">Dodaj tim</Button>
-                    <Button Style="{StaticResource button1}">Dodaj igrača</Button>
-                    <Button Style="{StaticResource button1}">Pretraži tim</Button>
-                    <Button Style="{StaticResource button1}">Pretraži igrača</Button>
-                    <Button Style="{StaticResource button1}">Uredi tim</Button>
-                    <Button Style="{StaticResource button1}">Uredi igrača</Button>
+                    <Button Style="{StaticResource button1}" Click="AddNewTeam">Dodaj tim</Button>
+                    <Button Style="{StaticResource button1}" Click="AddNewPlayer">Dodaj igrača</Button>
                 </UniformGrid>
             </materialDesign:Card>
         </Grid>
@@ -83,7 +79,7 @@
                             <DataGrid.Columns>
                                 <DataGridTextColumn Header="Ime igrača" Binding="{Binding FirstName}" Width="2*"/>
                                 <DataGridTextColumn Header="Prezime igrača" Binding="{Binding LastName}" Width="2*"/>
-                                <DataGridTextColumn Header="Datum rođenja" Binding="{Binding DateOfBirth}" Width="2*"/>
+                                <DataGridTextColumn Header="Datum rođenja" Binding="{Binding DateOfBirth, StringFormat={}{0:d.M.yyyy}}" Width="2*"/>
                                 <DataGridTextColumn Header="Starost" Binding="{Binding Age}" Width="1*"/>
                                 <DataGridTextColumn Header="Tim" Binding="{Binding Team}" Width="2*"/>
                             </DataGrid.Columns>

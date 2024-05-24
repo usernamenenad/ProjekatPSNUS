@@ -9,40 +9,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Pictures\players\bukayo_saka.png" />
-    <None Remove="Pictures\players\cole_palmer.png" />
-    <None Remove="Pictures\players\erling_haaland.png" />
-    <None Remove="Pictures\players\james_milner.png" />
-    <None Remove="Pictures\players\kyle_walker.png" />
-    <None Remove="Pictures\players\rasmus_hojlund.png" />
-    <None Remove="Pictures\players\ross_barkley.png" />
     <None Remove="Pictures\pllogo.png" />
-    <None Remove="Pictures\teams\arsenal.png" />
-    <None Remove="Pictures\teams\aston_villa.png" />
-    <None Remove="Pictures\teams\bournemouth.png" />
-    <None Remove="Pictures\teams\brentford.png" />
-    <None Remove="Pictures\teams\brighton.png" />
-    <None Remove="Pictures\teams\brighton_&amp;_hove_albion.png" />
-    <None Remove="Pictures\teams\burnley.png" />
-    <None Remove="Pictures\teams\chelsea.png" />
-    <None Remove="Pictures\teams\crystal_palace.png" />
-    <None Remove="Pictures\teams\everton.png" />
-    <None Remove="Pictures\teams\fulham.png" />
-    <None Remove="Pictures\teams\liverpool.png" />
-    <None Remove="Pictures\teams\luton_town.png" />
-    <None Remove="Pictures\teams\manchester_city.png" />
-    <None Remove="Pictures\teams\manchester_united.png" />
-    <None Remove="Pictures\teams\newcastle_united.png" />
-    <None Remove="Pictures\teams\nottingham_forest.png" />
-    <None Remove="Pictures\teams\sheffield_united.png" />
-    <None Remove="Pictures\teams\tottenham_hotspur.png" />
-    <None Remove="Pictures\teams\west_ham_united.png" />
-    <None Remove="Pictures\teams\wolverhampton_wanderers.png" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="EntityFramework" Version="6.4.4" />
-    <PackageReference Include="LiveCharts.Wpf" Version="0.9.7" />
     <PackageReference Include="MaterialDesignColors" Version="3.0.0" />
     <PackageReference Include="MaterialDesignThemes" Version="5.0.0" />
     <PackageReference Include="MaterialDesignThemes.MahApps" Version="1.0.0" />
@@ -55,34 +26,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Pictures\players\bukayo_saka.png" />
-    <Resource Include="Pictures\players\cole_palmer.png" />
-    <Resource Include="Pictures\players\erling_haaland.png" />
-    <Resource Include="Pictures\players\james_milner.png" />
-    <Resource Include="Pictures\players\kyle_walker.png" />
-    <Resource Include="Pictures\players\rasmus_hojlund.png" />
-    <Resource Include="Pictures\players\ross_barkley.png" />
     <Resource Include="Pictures\pllogo.png" />
-    <Resource Include="Pictures\teams\arsenal.png" />
-    <Resource Include="Pictures\teams\aston_villa.png" />
-    <Resource Include="Pictures\teams\bournemouth.png" />
-    <Resource Include="Pictures\teams\brentford.png" />
-    <Resource Include="Pictures\teams\brighton_&amp;_hove_albion.png" />
-    <Resource Include="Pictures\teams\burnley.png" />
-    <Resource Include="Pictures\teams\chelsea.png" />
-    <Resource Include="Pictures\teams\crystal_palace.png" />
-    <Resource Include="Pictures\teams\everton.png" />
-    <Resource Include="Pictures\teams\fulham.png" />
-    <Resource Include="Pictures\teams\liverpool.png" />
-    <Resource Include="Pictures\teams\luton_town.png" />
-    <Resource Include="Pictures\teams\manchester_city.png" />
-    <Resource Include="Pictures\teams\manchester_united.png" />
-    <Resource Include="Pictures\teams\newcastle_united.png" />
-    <Resource Include="Pictures\teams\nottingham_forest.png" />
-    <Resource Include="Pictures\teams\sheffield_united.png" />
-    <Resource Include="Pictures\teams\tottenham_hotspur.png" />
-    <Resource Include="Pictures\teams\west_ham_united.png" />
-    <Resource Include="Pictures\teams\wolverhampton_wanderers.png" />
   </ItemGroup>
 
 </Project>
