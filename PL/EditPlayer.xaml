@@ -42,7 +42,7 @@
                         </StackPanel>
                         <StackPanel>
                             <TextBlock Margin="2" FontSize="15">Tim</TextBlock>
-                            <TextBox x:Name="PlayerTeam" Margin="2" MaxLength="50"/>
+                            <ComboBox x:Name="PlayerTeam" Margin="2"/>
                         </StackPanel>
                         <StackPanel>
                             <TextBlock Margin="2" FontSize="15">Broj nastupa</TextBlock>
@@ -68,7 +68,7 @@
                         <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
                     <Grid Grid.Row="0">
-                        <Image Source="/Pictures/pllogo.png"
+                        <Image Source="/Pictures/pllogonew.png"
                                Width="150"
                                Height="150"/>
                     </Grid>
@@ -81,11 +81,11 @@
                         </Grid.Resources>
                         <UniformGrid Columns="1">
                             <Button Width="140" 
-        Height="40"
-        Style="{StaticResource button2}" Click="EditPlayerSaveChanges">Sačuvaj izmjene</Button>
+                                    Height="40"
+                                    Style="{StaticResource button2}" Click="EditPlayerSaveChanges">Sačuvaj izmjene</Button>
                             <Button Width="140" 
-        Height="40"
-        Style="{StaticResource button2}" Click="RemovePlayer">Ukloni igrača</Button>
+                                    Height="40"
+                                    Style="{StaticResource button2}" Click="RemovePlayer">Ukloni igrača</Button>
                         </UniformGrid>
                     </Grid>
                 </Grid>

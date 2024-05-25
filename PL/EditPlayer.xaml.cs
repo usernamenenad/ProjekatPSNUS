@@ -1,20 +1,9 @@
 ﻿using MahApps.Metro.Controls;
 using PL.src;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace PL
 {
@@ -38,7 +27,8 @@ namespace PL
             PlayerAge.Text = Player?.Age.ToString();
 
             PlayerNationality.Text = Player?.Nationality;
-            PlayerTeam.Text = Player?.Team;
+            PlayerTeam.ItemsSource = context.Teams.Select(t => t.Name).ToList();
+            PlayerTeam.SelectedItem = Player?.Team;
 
             PlayerApperiances.Text = Player?.Apperiances.ToString();
             PlayerGoals.Text = Player?.Goals.ToString();
@@ -47,7 +37,6 @@ namespace PL
 
             Show();
         }
-
         private void EditPlayerSaveChanges(object sender, RoutedEventArgs e)
         {
             if(ValidateInputs(out string errorMessage, out Team? newTeam))
@@ -89,7 +78,6 @@ namespace PL
         private void RemovePlayer(object sender, RoutedEventArgs e)
         {
             string YesNoMessage = "Da li ste sigurni da želite ukloniti igrača?";
-            var buttons = MessageBoxButton.YesNoCancel;
             MessageBoxResult result = MessageBox.Show(YesNoMessage, "Potvrda", MessageBoxButton.YesNoCancel, MessageBoxImage.Question);
             if (result == MessageBoxResult.Yes)
             {
@@ -98,6 +86,8 @@ namespace PL
                     context.Players.Remove(Player);
                     context.SaveChanges();
                     Owner.FindChild<DataGrid>("PlayersDataGrid").ItemsSource = context.Players.Where(p => p.TeamId == Player.TeamId).ToList();
+                    MessageBox.Show("Igrač uspješno uklonjen!");
+                    Close();
                 }
                 catch (Exception ex)
                 {
@@ -105,7 +95,6 @@ namespace PL
                     return;
                 }
             }
-            Close();
         }
 
         private bool ValidateInputs(out string errorMessage, out Team? newTeam)
@@ -120,6 +109,12 @@ namespace PL
                     errorMessage = "Greška! Nijedno polje ne smije ostati prazno!";
                     return true;
                 }
+            }
+            var DateOfBirthPlusAge = DateOnly.Parse(PlayerDateOfBirth.Text).AddYears(int.Parse(PlayerAge.Text));
+            if(DateOfBirthPlusAge == DateOnly.FromDateTime(DateTime.Now))
+            {
+                errorMessage = "Greška! Broj godina plus datum rođenja ne može biti veći od sadašnjeg datuma!";
+                return true;
             }
             try
             {

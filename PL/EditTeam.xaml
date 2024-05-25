@@ -60,7 +60,7 @@
                         <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
                     <Grid Grid.Row="0">
-                        <Image Source="/Pictures/pllogo.png"
+                        <Image Source="/Pictures/pllogonew.png"
                                 Width="150"
                                 Height="150"/>
                     </Grid>

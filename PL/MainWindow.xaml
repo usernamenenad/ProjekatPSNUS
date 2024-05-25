@@ -81,7 +81,7 @@
                                 <DataGridTextColumn Header="Prezime igrača" Binding="{Binding LastName}" Width="2*"/>
                                 <DataGridTextColumn Header="Datum rođenja" Binding="{Binding DateOfBirth, StringFormat={}{0:d.M.yyyy}}" Width="2*"/>
                                 <DataGridTextColumn Header="Starost" Binding="{Binding Age}" Width="1*"/>
-                                <DataGridTextColumn Header="Tim" Binding="{Binding Team}" Width="2*"/>
+                                <DataGridTextColumn Header="Tim" Binding="{Binding Team}" Width="3*"/>
                             </DataGrid.Columns>
                         </DataGrid>
                     </Grid>
