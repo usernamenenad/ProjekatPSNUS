@@ -18,7 +18,7 @@
                     <ColumnDefinition Width="5*"/>
                     <ColumnDefinition Width="2*"/>
                 </Grid.ColumnDefinitions>
-                <Grid Grid.Column="0" Margin="0 0 20 0">
+                <Grid Grid.Column="0" Margin="10 5 20 5">
                     <UniformGrid x:Name="Properties" Columns="1">
                         <StackPanel>
                             <TextBlock Margin="2" FontSize="15">Naziv</TextBlock>
@@ -69,6 +69,7 @@
                             <Style x:Key="button2" BasedOn="{StaticResource MaterialDesignFlatSecondaryButton}" TargetType="Button">
                                 <Setter Property="Margin" Value="25"/>
                                 <Setter Property="Foreground" Value="#3d195b"/>
+                                <Setter Property="FontWeight" Value="DemiBold"/>
                             </Style>
                         </Grid.Resources>
                         <UniformGrid Columns="1">

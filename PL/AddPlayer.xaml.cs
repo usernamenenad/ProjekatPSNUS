@@ -1,4 +1,5 @@
-﻿using MahApps.Metro.Controls;
+﻿#pragma warning disable CS8600, CS8602
+using MahApps.Metro.Controls;
 using PL.src;
 using System.Text.RegularExpressions;
 using System.Windows;
@@ -56,18 +57,34 @@ namespace PL
             errorMessage = "";
             TeamId = -1;
 
+            // Da li je bilo koje polje prazno
+
             foreach (StackPanel panel in Properties.Children.OfType<StackPanel>())
             {
                 if (panel.Children.OfType<TextBox>().Any(tbox => string.IsNullOrEmpty(tbox.Text)))
                 {
-                    errorMessage = "Greška! Nijedno polje ne smije ostati prazno!";
+                    errorMessage = "Greška! Nijedno tekstualno polje ne smije ostati prazno!";
+                    return true;
+                }
+                if(panel.Children.OfType<DatePicker>().Any(dt => dt.SelectedDate == null))
+                {
+                    errorMessage = "Greška! Polje datuma ne smije ostati prazno!";
+                    return true;
+                }
+                if(panel.Children.OfType<ComboBox>().Any(cb => cb.SelectedItem == null))
+                {
+                    errorMessage = "Greška! Tim mora biti odabran!";
                     return true;
                 }
             }
-            var DateOfBirthPlusAge = DateOnly.Parse(PlayerDateOfBirth.Text).AddYears(int.Parse(PlayerAge.Text));
-            if (DateOfBirthPlusAge == DateOnly.FromDateTime(DateTime.Now))
+
+            // Da li datum i broj godina odgovaraju
+
+            var DateOfBirthPlusAge = DateTime.Parse(PlayerDateOfBirth.Text).AddYears(int.Parse(PlayerAge.Text));
+            List<int> PossibleYears = [DateTime.Now.Year - 1, DateTime.Now.Year];
+            if (!PossibleYears.Contains(DateOfBirthPlusAge.Year))
             {
-                errorMessage = "Greška! Broj godina plus datum rođenja ne može biti veći od sadašnjeg datuma!";
+                errorMessage = "Greška! Greška u broju godina!";
                 return true;
             }
             try
@@ -77,6 +94,13 @@ namespace PL
             catch (Exception ex) 
             {
                 errorMessage = "Greška! Takav tim ne postoji u bazi podataka!";
+                return true;
+            }
+
+            // Da li je broj dresa u redu? (0 - 100)
+            if (int.Parse(PlayerJerseyNumber.Text) >= 100)
+            {
+                errorMessage = "Greška! Broj dresa mora biti manji od 100!";
                 return true;
             }
 

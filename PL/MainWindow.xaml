@@ -20,14 +20,34 @@
         </Grid.ColumnDefinitions>
         <Grid Grid.Column="0">
             <materialDesign:Card Margin="5">
+                <materialDesign:Card.Background>
+                    <LinearGradientBrush StartPoint="0, 0" EndPoint="1, 1">
+                        <GradientStop Color="#eeeee4" Offset="0.5"/>
+                        <GradientStop Color="#abdbe3" Offset="0.3"/>
+                    </LinearGradientBrush>
+                </materialDesign:Card.Background>
                 <UniformGrid Columns="1">
                     <UniformGrid.Resources>
-                        <Style x:Key="button1" BasedOn="{StaticResource MaterialDesignFlatSecondaryButton}" TargetType="Button">
+                        <Style x:Key="button1" BasedOn="{StaticResource MaterialDesignFlatButton}" TargetType="Button">
                             <Setter Property="Margin" Value="25"/>
                             <Setter Property="Foreground" Value="#3d195b"/>
+                            <Setter Property="FontWeight" Value="DemiBold"/>
                         </Style>
                     </UniformGrid.Resources>
-                    <Image Source="/Pictures/pllogo.png" HorizontalAlignment="Center" Width="190"/>
+                    <Image Source="/Pictures/pllogo.png" 
+                           HorizontalAlignment="Center" 
+                           Width="150"
+                           Height="150"
+                           MouseLeftButtonUp="GoToPLWebsite"
+                           Cursor="Hand">
+                        <Image.ToolTip>
+                            <ToolTip>
+                                <StackPanel>
+                                    <TextBlock Text="Klikni da odeš na oficijalni sajt Premijer Lige!"/>
+                                </StackPanel>
+                            </ToolTip>
+                        </Image.ToolTip>
+                    </Image>
                     <Button Style="{StaticResource button1}" Click="AddNewTeam">Dodaj tim</Button>
                     <Button Style="{StaticResource button1}" Click="AddNewPlayer">Dodaj igrača</Button>
                 </UniformGrid>
@@ -48,18 +68,33 @@
                                   ScrollViewer.CanContentScroll="False"
                                   GridLinesVisibility="Horizontal"
                                   HorizontalGridLinesBrush="{DynamicResource DataGrid.Grid.HorizontalLineBrush}"
-                                  HeadersVisibility="Column">
+                                  HeadersVisibility="Column"
+                                  AlternatingRowBackground="{DynamicResource DataGrid.AlternateRow.Backgrond}"
+                                  Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}"
+                                  Foreground="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"
+                                  BorderBrush="#FF688CAF"
+                                  BorderThickness="0"
+                                  ScrollViewer.PanningMode="Both"
+                                  Stylus.IsFlicksEnabled="False"
+                                  SelectionMode="Single">
                             <DataGrid.Resources>
                                 <Style TargetType="DataGridRow">
                                     <EventSetter Event="MouseDoubleClick" Handler="TeamsDataGridRow_MouseDoubleClick"/>
                                     <EventSetter Event="Selected" Handler="TeamsRowSelected"/>
+                                </Style>
+                                <Style TargetType="DataGridColumnHeader">
+                                    <Setter Property="Background" Value="{DynamicResource DataGrid.Column.Header.Background}"/>
+                                    <Setter Property="FontWeight" Value="SemiBold"/>
+                                    <Setter Property="Padding" Value="10"/>
+                                    <Setter Property="VerticalContentAlignment" Value="Center"/>
+                                    <Setter Property="MinHeight" Value="10"/>
                                 </Style>
                             </DataGrid.Resources>
                             <DataGrid.Columns>
                                 <DataGridTextColumn Header="Ime tima" Binding="{Binding Name}" Width="3*"/>
                                 <DataGridTextColumn Header="Lokacija" Binding="{Binding Location}" Width="2*"/>
                                 <DataGridTextColumn Header="Ime stadiona" Binding="{Binding StadiumName}" Width="3*"/>
-                                <DataGridTextColumn Header="Kapacitet stadiona" Binding="{Binding StadiumCapacity}" Width="*"/>
+                                <DataGridTextColumn Header="Kapacitet" Binding="{Binding StadiumCapacity}" Width="2*"/>
                             </DataGrid.Columns>
                         </DataGrid>
                     </Grid>
@@ -70,18 +105,33 @@
                                   ScrollViewer.CanContentScroll="True"
                                   GridLinesVisibility="Horizontal"
                                   HorizontalGridLinesBrush="{DynamicResource DataGrid.Grid.HorizontalLineBrush}"
-                                  HeadersVisibility="Column">
+                                  HeadersVisibility="Column"
+                                  AlternatingRowBackground="{DynamicResource DataGrid.AlternateRow.Backgrond}"
+                                  Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}"
+                                  Foreground="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"
+                                  BorderBrush="#FF688CAF"
+                                  BorderThickness="0"
+                                  ScrollViewer.PanningMode="Both"
+                                  Stylus.IsFlicksEnabled="False"
+                                  SelectionMode="Single">
                             <DataGrid.Resources>
                                 <Style TargetType="DataGridRow">
                                     <EventSetter Event="MouseDoubleClick" Handler="PlayersDataGridRow_MouseDoubleClick"/>
                                 </Style>
+                                <Style TargetType="DataGridColumnHeader">
+                                    <Setter Property="Background" Value="{DynamicResource DataGrid.Column.Header.Background}"/>
+                                    <Setter Property="FontWeight" Value="SemiBold"/>
+                                    <Setter Property="Padding" Value="10"/>
+                                    <Setter Property="VerticalContentAlignment" Value="Center"/>
+                                    <Setter Property="MinHeight" Value="10"/>
+                                </Style>
                             </DataGrid.Resources>
                             <DataGrid.Columns>
-                                <DataGridTextColumn Header="Ime igrača" Binding="{Binding FirstName}" Width="2*"/>
-                                <DataGridTextColumn Header="Prezime igrača" Binding="{Binding LastName}" Width="2*"/>
+                                <DataGridTextColumn Header="Ime" Binding="{Binding FirstName}" Width="1.5*"/>
+                                <DataGridTextColumn Header="Prezime" Binding="{Binding LastName}" Width="1.5*"/>
                                 <DataGridTextColumn Header="Datum rođenja" Binding="{Binding DateOfBirth, StringFormat={}{0:d.M.yyyy}}" Width="2*"/>
                                 <DataGridTextColumn Header="Starost" Binding="{Binding Age}" Width="1*"/>
-                                <DataGridTextColumn Header="Tim" Binding="{Binding Team}" Width="3*"/>
+                                <DataGridTextColumn Header="Tim" Binding="{Binding Team}" Width="2*"/>
                             </DataGrid.Columns>
                         </DataGrid>
                     </Grid>

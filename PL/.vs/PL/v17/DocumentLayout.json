@@ -1,16 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\radovic\\Desktop\\Files\\Projects\\ProjekatPSNUS\\PL\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{40E36547-C7B8-41BB-A4F7-5F684C9F7D9D}|PL.csproj|c:\\users\\radovic\\desktop\\files\\projects\\projekatpsnus\\pl\\editplayer.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{40E36547-C7B8-41BB-A4F7-5F684C9F7D9D}|PL.csproj|solutionrelative:editplayer.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{40E36547-C7B8-41BB-A4F7-5F684C9F7D9D}|PL.csproj|c:\\users\\radovic\\desktop\\files\\projects\\projekatpsnus\\pl\\addplayer.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{40E36547-C7B8-41BB-A4F7-5F684C9F7D9D}|PL.csproj|solutionrelative:addplayer.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -18,37 +9,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "EditPlayer.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\radovic\\Desktop\\Files\\Projects\\ProjekatPSNUS\\PL\\EditPlayer.xaml.cs",
-              "RelativeDocumentMoniker": "EditPlayer.xaml.cs",
-              "ToolTip": "C:\\Users\\radovic\\Desktop\\Files\\Projects\\ProjekatPSNUS\\PL\\EditPlayer.xaml.cs",
-              "RelativeToolTip": "EditPlayer.xaml.cs",
-              "ViewState": "AQIAAGkAAAAAAAAAAAAuwHcAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-25T21:17:20.714Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AddPlayer.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\radovic\\Desktop\\Files\\Projects\\ProjekatPSNUS\\PL\\AddPlayer.xaml.cs",
-              "RelativeDocumentMoniker": "AddPlayer.xaml.cs",
-              "ToolTip": "C:\\Users\\radovic\\Desktop\\Files\\Projects\\ProjekatPSNUS\\PL\\AddPlayer.xaml.cs",
-              "RelativeToolTip": "AddPlayer.xaml.cs",
-              "ViewState": "AQIAADAAAAAAAAAAAAAuwD4AAAA3AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-25T21:17:08.836Z",
-              "EditorCaption": ""
             }
           ]
         }

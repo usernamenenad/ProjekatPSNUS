@@ -1,7 +1,9 @@
-﻿using System.Data;
+﻿#pragma warning disable CS8600, CS8602, CS8604
+using System.Data;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
+using System.Diagnostics;
 using PL.src;
 
 namespace PL
@@ -63,7 +65,10 @@ namespace PL
             };
             addPlayer.Show();
         }
+
+        private void GoToPLWebsite(object sender, MouseButtonEventArgs e)
+        {
+            Process.Start(new ProcessStartInfo("https://www.premierleague.com/") { UseShellExecute = true});
+        }
     }
-
-
 }

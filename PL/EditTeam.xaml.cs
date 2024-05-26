@@ -1,4 +1,5 @@
-﻿using MahApps.Metro.Controls;
+﻿#pragma warning disable CS8600, CS8602, CS8604
+using MahApps.Metro.Controls;
 using PL.src;
 using System.Text.RegularExpressions;
 using System.Windows;
@@ -54,7 +55,7 @@ namespace PL
             try
             {
                 Team? tDB = context.Teams.Single(t => t.Id == Team.Id);
-                
+
                 string oldTeamName = tDB.Name;
                 tDB.Name = TeamName.Text;
 
@@ -89,7 +90,6 @@ namespace PL
         private void RemoveTeam(object sender, RoutedEventArgs e)
         {
             string YesNoMessage = "Da li ste sigurni da želite ukloniti tim? Svi igrači tog tima će takođe biti izgubljeni!";
-            var buttons = MessageBoxButton.YesNoCancel;
             MessageBoxResult result = MessageBox.Show(YesNoMessage, "Potvrda", MessageBoxButton.YesNoCancel, MessageBoxImage.Warning);
             if (result == MessageBoxResult.Yes)
             {
